@@ -12,8 +12,10 @@ phases:
     commands:
       - echo "Building Angular application..."
       - npm run build
+      - cp appspec.yml dist/angular-app/browser/
+      - cp -r scripts dist/angular-app/browser/
 
 artifacts:
+  base-directory: dist/angular-app/browser
   files:
     - '**/*'
-  base-directory: dist/angular-app/browser
