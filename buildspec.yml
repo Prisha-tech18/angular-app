@@ -16,5 +16,4 @@ artifacts:
   secondary-artifacts:
     config:
       files:
-        - 'appspec.yml'
-        - 'scripts/**/*'
+       - '**/*'
