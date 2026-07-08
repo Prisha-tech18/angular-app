@@ -9,6 +9,8 @@ phases:
   build:
     commands:
       - npm run build -- --configuration=production
+      - cp appspec.yml dist/
+      - cp -r scripts dist/
 artifacts:
   base-directory: dist
   files:
