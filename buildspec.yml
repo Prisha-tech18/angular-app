@@ -11,10 +11,10 @@ phases:
       - npm run build -- --configuration=production
 artifacts:
   files:
-    - 'dist/**/*'
-    - 'appspec.yml'
-    - 'scripts/**/*'
-  discard-paths: no
+    - '**/*'
+
+
+
 
 
 
