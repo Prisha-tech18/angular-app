@@ -5,17 +5,14 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - echo "Installing dependencies..."
       - npm install
-
   build:
     commands:
-      - echo "Building Angular application..."
-      - npm run build
-      - cp appspec.yml dist/angular-app/browser/
-      - cp -r scripts dist/angular-app/browser/
-
+      - npm run build -- --configuration=production
 artifacts:
-  base-directory: dist/angular-app/browser
   files:
-    - '**/*'
+    - 'dist/**/*'
+    - 'appspec.yml'
+    - 'scripts/**/*'
+  discard-paths: no
+
