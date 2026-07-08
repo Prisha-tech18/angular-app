@@ -10,11 +10,11 @@ phases:
     commands:
       - npm run build -- --configuration=production
 artifacts:
+  base-directory: dist
   files:
     - '**/*'
-
-
-
-
-
-
+  secondary-artifacts:
+    config:
+      files:
+        - 'appspec.yml'
+        - 'scripts/**/*'
